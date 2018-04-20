@@ -12,7 +12,7 @@ const library = [
         Author: "Michael Crichton",
         Genre: "Science Fiction",
         ISBN:  9780784838068,
-        checkedOut: false,
+        checkedOut: true,
         dueDate: ''
     },
     
