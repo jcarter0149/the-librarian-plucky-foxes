@@ -1,9 +1,8 @@
 
-let returnCheckedBook = (title, ID) => {
-    let title = findBook([title]);
-    let bookShelf = findBookShelf([ID]);
-    title.checkedOut = false;
-    title.dueDate = " ";
-    bookShelf.pop(findBookOnBookshelf([title])
+let returnCheckedBook = (ID, title) => {
+    let bookTitle = findBook(title);
+    let bookShelf = findBookshelf(ID);
+    bookTitle.checkedOut = false;
+    bookTitle.dueDate = " ";
+    bookShelf.pop(findBookOnBookshelf(ID, title))
 }
-
