@@ -12,7 +12,7 @@ const library = [
         Author: "Michael Crichton",
         Genre: "Science Fiction",
         ISBN:  9780784838068,
-        checkedOut: true,
+        checkedOut: false,
         dueDate: ''
     },
     
@@ -86,7 +86,4 @@ const library = [
 
 ]
 
-function saveLibrary() {localStorage.setItem('library', JSON.stringify(library))}
-saveLibrary()
-
-
+localStorage.setItem('library', JSON.stringify(library))
