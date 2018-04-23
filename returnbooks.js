@@ -1,6 +1,9 @@
-const returnBook = (title, patron) => {
-    const title = findBook([title]);
-    const bookShelf = findBookShelf([patron]);
-    title.checkOut = false;
-    title.duedate = ""; 
+
+let returnCheckedBook = (title, ID) => {
+    let title = findBook([title]);
+    let bookShelf = findBookShelf([ID]);
+    title.checkedOut = false;
+    title.dueDate = " ";
+    bookShelf.pop(findBookOnBookshelf([title])
 }
+
