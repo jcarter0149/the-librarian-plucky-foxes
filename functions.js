@@ -10,6 +10,10 @@ const findBook = title => {
 }
 
 const findBookOnBookshelf = (id, title) => {
-    findBookshelf(id).find(currentBook => currentBook.Title === title)
-    return book
+     const book =  findBookshelf(id).find(currentBook => currentBook.Title === title)
+     return book 
 }
+
+
+
+
