@@ -14,6 +14,8 @@ const findBookOnBookshelf = (id, title) => {
      return book 
 }
 
-
+function findPatron(id) {
+    return patrons.find(patron => patron.ID === id)
+}
 
 
