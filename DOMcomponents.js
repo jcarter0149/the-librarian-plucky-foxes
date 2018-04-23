@@ -17,6 +17,9 @@ const printTransaction = (transaction, patron, title, fee) => {
     if (fee) {
         transactionArticle.appendChild(buildElement('p', 'Fee: $5.00'))
     }
+    if (transaction === 'Checkout') {
+        transactionArticle.appendChild(buildElement('p', `Due Date: ${findBook(title).dueDate}`))
+    }
     body.appendChild(transactionArticle)
 }
 
