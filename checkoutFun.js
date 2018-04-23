@@ -18,8 +18,10 @@ const checkout = (id, title) => {
     book.dueDate = fortnite
     book.checkedOut = true
     bookshelf.push(book)
+    printTransaction("Checkout", findPatron(id), book.Title, false)
     }
-    
+    savePatrons()
+    saveLibrary()
 }
 
 

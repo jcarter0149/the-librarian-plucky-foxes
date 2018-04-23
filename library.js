@@ -87,3 +87,7 @@ const library = [
 ]
 
 localStorage.setItem('library', JSON.stringify(library))
+
+const saveLibrary = () => {
+    localStorage.setItem('library', JSON.stringify(library))
+}
