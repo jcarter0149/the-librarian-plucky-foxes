@@ -16,6 +16,7 @@ function createPatron (First,Last,Address,favorite) {
     } 
     patrons.push(newPatron)
     savePatrons()
+    printTransaction("New Patron", newPatron, false, false)
 }
 
 

@@ -8,8 +8,10 @@ const printTransaction = (transaction, patron, title, fee) => {
     const body = document.querySelector('body')
     const transactionArticle = document.createElement('article')
     transactionArticle.appendChild(buildElement('h3', `Transaction: ${transaction}`))
+    transactionArticle.appendChild(buildElement('p', new Date()))
     transactionArticle.appendChild(buildElement('p', `Patron: ${patron.First} ${patron.Last}`))
-    if (transaction === 'Checkout' || transaction === "Return") {
+    transactionArticle.appendChild(buildElement('p', `ID: ${patron.ID}`))
+    if (transaction === 'Checkout' || transaction === "Return" || transaction === "Genre Search") {
         transactionArticle.appendChild(buildElement('p',  `Title(s): ${title}`))
     }
     if (fee) {

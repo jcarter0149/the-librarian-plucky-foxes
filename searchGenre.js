@@ -1,5 +1,5 @@
 
-const searchGenre = (genre) => {
+const searchGenre = (id, genre) => {
     const bookList = []
     library.forEach(
         (k) => {
@@ -7,5 +7,15 @@ const searchGenre = (genre) => {
                 bookList.push(k)
             }
     })
-    return bookList
+    let genreListing = ''
+    bookList.forEach(
+        (k) => {
+            if (bookList.indexOf(k) < (bookList.length - 1)) {
+                genreListing += k.Title + ", " 
+            } else {
+                genreListing += k.Title
+            }
+        }
+    )
+    printTransaction("Genre Search", findPatron(id), genreListing, false)
 }

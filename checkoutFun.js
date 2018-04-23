@@ -9,8 +9,6 @@ function getDate (currentDate){
 }
 
 const checkout = (id, title) => {
-    const transaction= "Checkout"
-    const fee = false
     const bookshelf = findBookshelf(id)
     const book = findBook(title)
     if (book.checkedOut)
@@ -20,9 +18,10 @@ const checkout = (id, title) => {
     book.dueDate = fortnite
     book.checkedOut = true
     bookshelf.push(book)
-    printTransaction(transaction, findPatron(id), book.Title, fee)
+    printTransaction("Checkout", findPatron(id), book.Title, false)
     }
-    
+    savePatrons()
+    saveLibrary()
 }
 
 
