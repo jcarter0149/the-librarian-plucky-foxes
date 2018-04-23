@@ -9,13 +9,14 @@ const fortnite = new Date(Date.now() + 12096e5)
 const checkout = (id, title) => {
     const bookshelf = findBookshelf(id)
     const book = findBook([title])
-    if (library.title === bookshelf.title)
-    alert(`This book is currently checked out. It is due back ${fortnite}`
+    if (book.checkedOut)
+    alert(`This book is currently checked out. It is due back ${book.dueDate}`
     )
-    else (library.title !== bookshelf.title)
+    else {
     library.dueDate = fortnite
     library.checkedOut = true
-    bookshelf.push(library.title)
+    bookshelf.push(book)
+    }
 }
 
 
@@ -28,7 +29,7 @@ const checkout = (id, title) => {
 // const findBook = title => {
 //     const book = library.find(currentBook => book.Title === title)
 //     return book
-}
+// }
 
 
 
