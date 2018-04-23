@@ -86,7 +86,7 @@ const library = [
 
 ]
 
-localStorage.setItem('library', JSON.stringify(library))
-
+function saveLibrary() {localStorage.setItem('library', JSON.stringify(library))}
+saveLibrary()
 
 
