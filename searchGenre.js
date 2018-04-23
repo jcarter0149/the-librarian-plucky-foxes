@@ -4,7 +4,7 @@ const searchGenre = (genre) => {
     library.forEach(
         (k) => {
             if (k.Genre === genre) {
-                bookList.push(k.Title)
+                bookList.push(k)
             }
     })
     return bookList
